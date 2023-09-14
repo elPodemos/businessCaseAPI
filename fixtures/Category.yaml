@@ -1,0 +1,3 @@
+App\Entity\Category:
+  category{0..5}:
+    label: "<sentence(1)>"

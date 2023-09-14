@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Eth{% endblock %}
+
+{% block body %}
+    <h1>Eth</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ eth.id }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ eth.price }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ eth.date ? eth.date|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_eth_index') }}">back to list</a>
+
+    <a href="{{ path('app_eth_edit', {'id': eth.id}) }}">edit</a>
+
+    {{ include('eth/_delete_form.html.twig') }}
+{% endblock %}

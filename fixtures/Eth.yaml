@@ -1,0 +1,4 @@
+App\Entity\Eth:
+  eth{0..20}:
+    price: "<numberBetween(1, 50)>"
+    date: '<dateTimeBetween("-2 years", "now")>'
