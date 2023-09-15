@@ -1,0 +1,5 @@
+App\Entity\Address:
+  address{0..10}:
+    label: "<sentence(2)>"
+    postal_code: "<numberBetween(01000, 95000)>"
+    country: "<sentence(1)>"

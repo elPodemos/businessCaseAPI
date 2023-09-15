@@ -1,0 +1,7 @@
+App\Entity\Nft:
+  nft{0..200}:
+    name: "<sentence(1)>"
+    price: "<numberBetween(10, 999)>"
+    date: '<dateTimeBetween("-2 years", "now")>'
+    path_image: '<sentence(5)>'
+    subcategories: '<numberBetween(1, 5)>x @subcategory*'

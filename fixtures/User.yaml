@@ -1,0 +1,15 @@
+parameters:
+    someFormatArray: ['Homme', 'Femme']
+
+App\Entity\User:
+  user{0..15}:
+    email: '<email()>'
+    password: 'ouioui'
+    userName: "<sentence(1)>"
+    firstName: "<sentence(1)>"
+    lastName: "<sentence(1)>"
+    gender: '<randomElement($someFormatArray)>'
+    birth: '<dateTimeBetween("-20 years", "-2 years")>'
+    path: "<sentence(4)>"
+    address: "@address*"
+    nfts: '<numberBetween(1, 5)>x @nft*'
